@@ -5,13 +5,14 @@ class Solution {
         
         while (left < right) {
             int mid = left + (right - left) / 2;
+            
             if (arr[mid] < arr[mid + 1]) {
-                left = mid + 1; // peak is on the right
+                left = mid + 1;
             } else {
-                right = mid; // peak is at mid or on the left
+                right = mid;
             }
         }
         
-        return left; // left == right is the peak index
+        return left;
     }
 }
